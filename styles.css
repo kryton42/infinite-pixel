@@ -316,7 +316,8 @@ h3 {
 }
 
 .meta {
-  margin-top: 10px;
+  margin-top: 4px;
+  margin-bottom: 14px;
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -324,17 +325,21 @@ h3 {
 }
 
 .price {
-  margin: 8px 0 12px;
+  margin: 10px 0 0;
   color: var(--text);
   font-family: var(--display);
-  font-size: 1.28rem;
+  font-size: clamp(1.85rem, 3.2vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .price span {
   color: var(--muted);
   font-family: var(--font);
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 600;
+  letter-spacing: 0;
 }
 
 .app-actions {
