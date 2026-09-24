@@ -326,7 +326,7 @@ h3 {
 
 .price {
   margin: 10px 0 0;
-  color: var(--text);
+  color: var(--accent);
   font-family: var(--display);
   font-size: clamp(1.85rem, 3.2vw, 2.25rem);
   font-weight: 800;
@@ -335,7 +335,7 @@ h3 {
 }
 
 .price span {
-  color: var(--muted);
+  color: color-mix(in srgb, var(--accent) 70%, var(--muted));
   font-family: var(--font);
   font-size: 0.95rem;
   font-weight: 600;
