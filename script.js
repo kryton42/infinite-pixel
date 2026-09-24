@@ -1,4 +1,35 @@
 (() => {
+  async function applyPrices() {
+    try {
+      const response = await fetch("prices.json", { cache: "no-store" });
+      if (!response.ok) return;
+      const prices = await response.json();
+
+      document.querySelectorAll("[data-price-app]").forEach((el) => {
+        const app = prices[el.dataset.priceApp];
+        if (!app) return;
+        const label = el.querySelector("[data-price-label]");
+        const note = el.querySelector("[data-price-note]");
+        if (label && app.label) label.textContent = app.label;
+        if (note && app.note) note.textContent = app.note;
+      });
+
+      document.querySelectorAll("[data-price-button]").forEach((el) => {
+        const app = prices[el.dataset.priceButton];
+        if (app?.button) el.textContent = app.button;
+      });
+
+      document.querySelectorAll("[data-price-badge]").forEach((el) => {
+        const app = prices[el.dataset.priceBadge];
+        if (app?.badge) el.textContent = app.badge;
+      });
+    } catch (_) {
+      // Keep the HTML fallback prices if the JSON cannot load.
+    }
+  }
+
+  applyPrices();
+
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
   const tabs = [...document.querySelectorAll('.tabs [role="tab"]')];

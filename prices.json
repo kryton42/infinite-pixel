@@ -1,0 +1,17 @@
+{
+  "bitq": {
+    "label": "$19",
+    "note": "one-time",
+    "button": "Buy Bit Q Pro — $19"
+  },
+  "ditcopy": {
+    "label": "$14.99",
+    "note": "one-time",
+    "badge": "$14.99 one-time"
+  },
+  "timebridge": {
+    "label": "Free",
+    "note": "· In‑App Purchases",
+    "badge": "Free · In‑App Purchases"
+  }
+}
