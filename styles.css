@@ -734,7 +734,7 @@ h3 {
   letter-spacing: -0.03em;
   line-height: 1.25;
   margin: 0 auto 12px;
-  max-width: 22ch;
+  max-width: 28ch;
   background: linear-gradient(90deg, var(--magenta), var(--cyan));
   -webkit-background-clip: text;
   background-clip: text;
