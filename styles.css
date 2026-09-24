@@ -720,6 +720,34 @@ h3 {
   text-decoration: underline;
 }
 
+.philosophy {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 16px;
+  text-align: center;
+}
+
+.philosophy-line {
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  margin: 0 auto 12px;
+  max-width: 22ch;
+  background: linear-gradient(90deg, var(--magenta), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.philosophy-lede {
+  color: var(--muted);
+  max-width: 42ch;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
 .reviews {
   max-width: var(--max);
   margin: 0 auto;
@@ -1041,6 +1069,7 @@ body.lightbox-open .nav {
   .intro,
   .apps,
   .showcase,
+  .philosophy,
   .reviews,
   .faq,
   .studio {
