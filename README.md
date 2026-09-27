@@ -47,6 +47,10 @@ You can edit it either way:
 
 Time Bridge stays **Free · In‑App Purchases** (no Pro dollar amount to track).
 
+## Marketing
+
+Ready-to-post X / Reddit / store blurbs live in [`marketing-copy.md`](marketing-copy.md).
+
 ## SEO
 
 - Absolute Open Graph + Twitter card tags
