@@ -457,8 +457,40 @@
             <a href="https://kryton42.github.io/Time-Bridge-Legal/support.html" target="_blank" rel="noopener">Support</a> ·
             <a href="https://kryton42.github.io/Time-Bridge-Legal/privacy.html" target="_blank" rel="noopener">Privacy</a>.
             For Bit Q Pro, use the contact options on your Gumroad receipt.
+            See also our <a href="#cookies">Cookies</a> notes for this website.
           </p>
         </details>
+      </div>
+    </section>
+
+    <section id="cookies" class="cookies" aria-labelledby="cookies-heading">
+      <div class="section-head">
+        <p class="eyebrow">Cookies</p>
+        <h2 id="cookies-heading">How this website uses cookies</h2>
+      </div>
+      <div class="cookies-copy">
+        <p>
+          <strong>We do not use analytics, advertising, or tracking cookies.</strong>
+          That matches our studio philosophy: no accounts, no subscriptions, and no tracking.
+        </p>
+        <p>
+          When you dismiss the cookie notice, we save a small preference in your browser
+          (<code>localStorage</code>) so we don’t keep asking. That preference stays on your device
+          and is not sent to us as tracking data.
+        </p>
+        <p>
+          This site loads <strong>Google Fonts</strong> for typography. Google may process connection
+          data under its own policies when those font files are requested.
+        </p>
+        <p>
+          <strong>Gumroad</strong> powers Bit Q Pro checkout. Their script loads only after you accept
+          the cookie notice (or if you already accepted earlier). Gumroad may set its own cookies when
+          you open checkout. Buy links still work as normal website links either way.
+        </p>
+        <p>
+          App Store buttons open Apple’s website in a new tab. Apple’s cookies and privacy practices
+          apply there.
+        </p>
       </div>
     </section>
   </main>
@@ -478,6 +510,7 @@
         <a href="#philosophy">Privacy</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
+        <a href="#cookies">Cookies</a>
         <a href="https://kryton42.github.io/DITCopy-Privacy-Policy/" target="_blank" rel="noopener">DitCopy Privacy</a>
         <a href="https://kryton42.github.io/Time-Bridge-Legal/privacy.html" target="_blank" rel="noopener">Time Bridge Privacy</a>
       </nav>
@@ -491,7 +524,22 @@
     <p class="lightbox-caption"></p>
   </div>
 
+  <div class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+    <div class="cookie-banner-inner">
+      <div class="cookie-copy">
+        <p id="cookie-title"><strong>Cookies &amp; privacy</strong></p>
+        <p id="cookie-desc">
+          We don’t use tracking or analytics cookies. A small on-device preference remembers this notice.
+          Google Fonts and Gumroad checkout are third parties that may set their own cookies.
+          <a href="#cookies">Learn more</a>
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-primary" data-cookie-accept>Got it</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
-  <script src="https://gumroad.com/js/gumroad.js" async></script>
 </body>
 </html>

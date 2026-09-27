@@ -30,6 +30,53 @@
 
   applyPrices();
 
+  const COOKIE_KEY = "infinite-pixel-cookie-consent";
+  const cookieBanner = document.getElementById("cookie-banner");
+
+  function loadGumroad() {
+    if (document.querySelector('script[data-gumroad-loader="true"]')) return;
+    const script = document.createElement("script");
+    script.src = "https://gumroad.com/js/gumroad.js";
+    script.async = true;
+    script.dataset.gumroadLoader = "true";
+    document.body.appendChild(script);
+  }
+
+  function acceptCookies() {
+    try {
+      localStorage.setItem(COOKIE_KEY, "accepted");
+    } catch (_) {
+      // Private mode may block storage; still hide the banner for this visit.
+    }
+    if (cookieBanner) cookieBanner.hidden = true;
+    loadGumroad();
+  }
+
+  function initCookieBanner() {
+    if (!cookieBanner) {
+      loadGumroad();
+      return;
+    }
+
+    let consent = null;
+    try {
+      consent = localStorage.getItem(COOKIE_KEY);
+    } catch (_) {
+      consent = null;
+    }
+
+    if (consent === "accepted") {
+      cookieBanner.hidden = true;
+      loadGumroad();
+      return;
+    }
+
+    cookieBanner.hidden = false;
+    cookieBanner.querySelector("[data-cookie-accept]")?.addEventListener("click", acceptCookies);
+  }
+
+  initCookieBanner();
+
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
   const tabs = [...document.querySelectorAll('.tabs [role="tab"]')];

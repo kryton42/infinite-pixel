@@ -893,6 +893,100 @@ h3 {
   text-decoration: underline;
 }
 
+.cookies {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 16px;
+}
+
+.cookies-copy {
+  display: grid;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.cookies-copy strong {
+  color: var(--text);
+}
+
+.cookies-copy code {
+  font-size: 0.86em;
+  color: var(--cyan);
+}
+
+.cookies-copy a {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.cookies-copy a:hover {
+  text-decoration: underline;
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1100;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+  padding: 16px 18px;
+  background: rgba(10, 14, 22, 0.96);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.cookie-copy {
+  flex: 1 1 280px;
+}
+
+.cookie-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cookie-copy p + p {
+  margin-top: 6px;
+}
+
+.cookie-copy strong {
+  color: var(--text);
+}
+
+.cookie-copy a {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.cookie-copy a:hover {
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  flex: 0 0 auto;
+}
+
+.cookie-actions .btn {
+  min-width: 110px;
+}
+
 .footer {
   margin-top: 24px;
   border-top: 1px solid var(--line);
@@ -1072,6 +1166,7 @@ body.lightbox-open .nav {
   .philosophy,
   .reviews,
   .faq,
+  .cookies,
   .studio {
     padding-left: 16px;
     padding-right: 16px;
