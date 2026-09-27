@@ -47,6 +47,15 @@ You can edit it either way:
 
 Time Bridge stays **Free · In‑App Purchases** (no Pro dollar amount to track).
 
+## SEO
+
+- Absolute Open Graph + Twitter card tags
+- `robots.txt` and `sitemap.xml`
+- JSON-LD for the studio and three apps
+
+After big content changes, you can ask Google to recrawl via
+[Google Search Console](https://search.google.com/search-console) (optional, free).
+
 ## Apps
 
 - Bit Q Pro — Gumroad (price in `prices.json`)
