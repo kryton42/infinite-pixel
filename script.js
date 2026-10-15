@@ -77,6 +77,33 @@
 
   initCookieBanner();
 
+  function initYouTubeFacades() {
+    document.querySelectorAll("[data-youtube-id]").forEach((facade) => {
+      const button = facade.querySelector(".video-facade-play");
+      if (!button) return;
+
+      button.addEventListener("click", () => {
+        const id = facade.dataset.youtubeId;
+        const title = facade.dataset.youtubeTitle || "YouTube video";
+        if (!id || facade.classList.contains("is-playing")) return;
+
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.title = title;
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.loading = "lazy";
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+
+        facade.classList.add("is-playing");
+        facade.replaceChildren(iframe);
+      });
+    });
+  }
+
+  initYouTubeFacades();
+
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
   const tabs = [...document.querySelectorAll('.tabs [role="tab"]')];
